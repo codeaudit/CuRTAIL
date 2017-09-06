@@ -1,6 +1,6 @@
 # CurTAIL
 
-This repository provides an API for ...
+This repository provides an API for CurTAIL framework. CurTAIL can be used as a generic framework for characterizing and thwarting  adversarial samples in the context of deep learning.
 
 The repo includes an example with mnist dataset. To evaluate the framework for different applications, you'll need to slightly modify the files.
 
