@@ -7,7 +7,7 @@ The repo includes an example with mnist dataset. To evaluate the framework for d
 
 
 ## python packages required:
-Tensorflow, Keras, scipy, sklearn, progressbarsimple
+Tensorflow(v 1.2.1), Keras(v 2.0.6), scipy(v 0.19.1), sklearn(v 0.18.2)
 
 ## matlab packages required:
 ompbox10. See http://www.cs.technion.ac.il/~ronrubin/software.html for installation instructions.
