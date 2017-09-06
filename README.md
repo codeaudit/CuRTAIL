@@ -51,7 +51,7 @@ Step-2: train your latent dictionary using the "train_MRR_module.py" file. On to
       
       path_to_baseline: this is the model you trained in step 1
       path_to_save-detector: this will be the output of this file
-      parameters for training: batch_size, number of epochs, learning rate, weight decay, momentum, and parameter gamma (see                                Equatio 11 in the paper).
+      parameters for training: batch_size, number of epochs, learning rate, weight decay, momentum, and parameter gamma (see Equation 11 in the paper).
       checkpoint_id: the id of the checkpoint layer in "model.layers" where "model" is the baseline keras model.
 
 Step-3: train dictionaries for each class using the "train_dictionary.py" file. specify the following parameters on top of the file:
