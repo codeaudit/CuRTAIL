@@ -48,18 +48,21 @@ Step-0: specify neural network architecture in the "model_architecture.py" file 
 Step-1: train your baseline neural network using keras with Tensorflow backend, and save the trained model. An example is provided in "train_model.py". On top of the file, specify "path_to_save" to save the trained model. Here we saved the model in 'mnist_baseline', so you do not need to re-train the model from scratch.
 
 Step-2: train your latent dictionary using the "train_MRR_module.py" file. On top of the file specify the following:
+      
       path_to_baseline: this is the model you trained in step 1
       path_to_save-detector: this will be the output of this file
       parameters for training: batch_size, number of epochs, learning rate, weight decay, momentum, and parameter gamma (see                                Equatio 11 in the paper).
       checkpoint_id: the id of the checkpoint layer in "model.layers" where "model" is the baseline keras model.
 
 Step-3: train dictionaries for each class using the "train_dictionary.py" file. specify the following parameters on top of the file:
+      
       path_to_save_dictionaries: the path to save the learned dictionaries
       height, width, and depth of the images
       patch_size: this is the size of the window of neighbor pixels used for learning the dictionary
       dic_size: the number of columns in each dictionary. Same as the dimensionality of sparse codes
 
 Step-4: generate adversarial samples using the "create_adv.py" module. On top of the file, specify the following:
+      
       victim_model_path: this is the path to the main model you trained in Step-1
       method: this is the method to generate adversarial samples. possible values are 'Deepfool', 'FSG', and 'JSMA'
       niters: number of iterations in the pertinent attack. This is a list of integer numbers.
@@ -68,6 +71,7 @@ Step-4: generate adversarial samples using the "create_adv.py" module. On top of
       path_to_save_samples: the directory where you wish to save the adversarial samples.
       
 Step-5: denoise the adversarial images using the matlab script "denoiser.m". makesure you have installed the ompbox10 module and added the installation path to Matlab directory. specify the following on top of the file:
+      
       omp_K: the number of nonzero elements in each sparse code. 
       patch_size: must be compatible with the one specified in Step-3
       adv-dir: the parent directory of adversarial samples. must be compatible with the one specified in Step-4
@@ -78,6 +82,7 @@ Step-5: denoise the adversarial images using the matlab script "denoiser.m". mak
   
   
  Step-6: run the "detect_adversarial.py" file to check the detection rate of the module. Specify the following on top of the file:
+      
       path_to_detector: the detector latent dictionary module trained in Step-2
       path_to_baseline: the main (victim) model trained in Step-1
       path_to_images: the denoised images along with the original adversarial images outputted in Step-5
